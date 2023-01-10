@@ -21,7 +21,7 @@ public class Director_entity {
     @Column(name = "Director")
     private String director_name;
 
-    @OneToMany
+    @OneToMany(mappedBy = "director", cascade = CascadeType.ALL)
     List<Movie_entity> movies;
 
 }

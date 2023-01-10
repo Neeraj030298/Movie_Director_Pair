@@ -11,7 +11,7 @@ public class Controller {
     @Autowired
     Movie_Service movie_service;
     @PostMapping("/addMoviePair")
- public void addMovie(@RequestBody() Movie_entity m, @RequestParam("Director") String director)
+ public void addMovie(@RequestBody() Movie_entity m, @RequestBody Director_entity director)
     {
  movie_service.add_Movie_Director_Pair(m, director);
     }

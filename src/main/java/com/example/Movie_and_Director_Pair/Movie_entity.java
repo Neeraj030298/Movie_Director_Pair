@@ -19,7 +19,6 @@ public class Movie_entity {
     @ManyToOne
     @JoinColumn
     @JsonIgnore
-    @Column(name = "Director")
     private String director_Name;
 
 

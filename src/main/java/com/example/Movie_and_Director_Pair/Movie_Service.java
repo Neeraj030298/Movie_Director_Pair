@@ -12,10 +12,10 @@ public class Movie_Service {
     Movie_Repo movie_repo;
     @Autowired
     Director_Repo director_repo;
-    public void add_Movie_Director_Pair(Movie_entity movie, String director)
+    public void add_Movie_Director_Pair(Movie_entity movie, Director_entity director)
     {
-
-       movie.setDirector_Name(director);
+  director_repo.save(director);
+       movie.setDirector_Name(director.getDirector_name());
        movie_repo.save(movie);
     }
     public List<Movie_entity> get_Movie_By_Director_Name(String DirectorName) {
